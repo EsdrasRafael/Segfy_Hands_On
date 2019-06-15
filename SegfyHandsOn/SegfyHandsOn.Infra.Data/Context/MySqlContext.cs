@@ -8,6 +8,11 @@ namespace SegfyHandsOn.Infra.Data.Context
     {
         public DbSet<SeguroAuto> SeguroAuto { get; set; }
 
+        public MySqlContext(DbContextOptions<MySqlContext> options) : base(options)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

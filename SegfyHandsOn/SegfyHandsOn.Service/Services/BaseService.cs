@@ -9,7 +9,12 @@ namespace SegfyHandsOn.Service.Services
 {
     public class BaseServiceIService<T> where T : BaseEntity
     {
-        private BaseRepository<T> repository = new BaseRepository<T>();
+        private BaseRepository<T> repository;
+
+        public BaseServiceIService(BaseRepository<T> _baseRepository)
+        {
+            repository = _baseRepository;
+        }
 
         public T Post<V>(T obj) where V : AbstractValidator<T>
         {
