@@ -11,10 +11,13 @@ Projeto criado como parte da 4° fase do processo seletivo para vaga de Programa
 
 ## Arquitetura: 
 
-
+- MVC 
 
 ## Framework:
 
-- Asp.Net Core 2.1
+- Asp.Net Core 2.2
 
-## Nuget-Packages:
+## IDEs utilizadas:
+
+- Visual Studio Code
+- Visual Studio 2019
