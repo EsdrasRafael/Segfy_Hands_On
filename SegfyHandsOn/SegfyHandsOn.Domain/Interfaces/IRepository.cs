@@ -13,7 +13,7 @@ namespace SegfyHandsOn.Domain.Interfaces
 
         void Remove(int id);
 
-        T Select(int id);
+        T SelectById(int id);
 
         IList<T> SelectAll();
     }
