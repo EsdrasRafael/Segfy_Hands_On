@@ -34,7 +34,6 @@ namespace SegfyHandsOn.ApplicationWeb
             /* ... */
 
             services.AddDbContext<MySqlContext>(o => o.UseMySql("DefaultConnection"));
-            services.AddTransient<ISeguroAutoRepository, SeguroAutoRepository>();
             services.AddMvc();
             /* ... */
         }
