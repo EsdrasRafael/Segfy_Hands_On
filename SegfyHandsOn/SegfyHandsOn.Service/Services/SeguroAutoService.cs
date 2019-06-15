@@ -1,4 +1,5 @@
 ﻿using SegfyHandsOn.Domain.Entities;
+using SegfyHandsOn.Domain.Interfaces;
 using SegfyHandsOn.Infra.Data.Repository;
 using System;
 using System.Collections.Generic;

@@ -13,6 +13,9 @@ using Microsoft.Extensions.Options;
 using SegfyHandsOn.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql;
+using SegfyHandsOn.Domain.Interfaces;
+using SegfyHandsOn.Infra.Data.Repository;
+using SegfyHandsOn.Domain.Entities;
 
 namespace SegfyHandsOn.ApplicationWeb
 {
@@ -31,7 +34,8 @@ namespace SegfyHandsOn.ApplicationWeb
             /* ... */
 
             services.AddDbContext<MySqlContext>(o => o.UseMySql("DefaultConnection"));
-
+            services.AddTransient<ISeguroAutoRepository, SeguroAutoRepository>();
+            services.AddMvc();
             /* ... */
         }
 
