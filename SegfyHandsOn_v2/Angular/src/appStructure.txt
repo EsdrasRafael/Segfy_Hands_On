@@ -1,17 +1,17 @@
 ● src
 +---● app
-|   +--● seguroauto
+|   +--● seguroauto-details
 |   |  |--seguroauto.component.ts|.html|.css
-|   |  +--● seguroauto
+|   |  +--● seguroauto-detail
 |   |  |  |--seguroauto.component.ts|.html|.css
 |   |  |
 |   |  +--● seguroauto-list
 |   |  |  |--seguroauto-list.component.ts|.html|.css
 |   |  |
 |   |  +--● shared
-|   |     |--seguroauto.service.ts
-|   |     |--seguroauto.model.ts
+|   |     |--seguroauto-detail.service.ts
+|   |     |--seguroauto-detail.model.ts
 |   |
 |   |--app.module.ts
-|
+
 |--index.html (cdn path for bootstrap)
