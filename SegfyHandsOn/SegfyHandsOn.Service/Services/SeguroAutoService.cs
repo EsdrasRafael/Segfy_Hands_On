@@ -8,7 +8,7 @@ namespace SegfyHandsOn.Service.Services
 {
     public class SeguroAutoService : BaseServiceIService<SeguroAuto>
     {
-        private SeguroAutoRepository seguroAutoRepository;
+        private readonly SeguroAutoRepository seguroAutoRepository;
         public SeguroAutoService(SeguroAutoRepository _seguroAutoRepository) : base(_seguroAutoRepository)
         {
             seguroAutoRepository = _seguroAutoRepository;

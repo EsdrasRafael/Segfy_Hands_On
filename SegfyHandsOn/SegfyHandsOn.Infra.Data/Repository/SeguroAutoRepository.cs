@@ -8,7 +8,7 @@ namespace SegfyHandsOn.Infra.Data.Repository
 {
     public class SeguroAutoRepository : BaseRepository<SeguroAuto>
     {
-        private MySqlContext mysqlContext;
+        private readonly MySqlContext mysqlContext;
         public SeguroAutoRepository(MySqlContext _mysqlContext) : base(_mysqlContext)
         {
             mysqlContext = _mysqlContext;

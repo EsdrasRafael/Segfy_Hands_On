@@ -9,7 +9,7 @@ namespace SegfyHandsOn.Service.Services
 {
     public class BaseServiceIService<T> where T : BaseEntity
     {
-        private BaseRepository<T> repository;
+        private readonly BaseRepository<T> repository;
 
         public BaseServiceIService(BaseRepository<T> _baseRepository)
         {

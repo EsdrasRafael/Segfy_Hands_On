@@ -10,7 +10,7 @@ namespace SegfyHandsOn.Infra.Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private MySqlContext context;
+        private readonly MySqlContext context;
 
         public BaseRepository(MySqlContext _context)
         {

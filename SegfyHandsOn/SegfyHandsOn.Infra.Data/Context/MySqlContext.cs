@@ -6,12 +6,12 @@ namespace SegfyHandsOn.Infra.Data.Context
 {
     public class MySqlContext : DbContext
     {
-        public DbSet<SeguroAuto> SeguroAuto { get; set; }
-
         public MySqlContext(DbContextOptions<MySqlContext> options) : base(options)
         {
 
         }
+
+        public DbSet<SeguroAuto> SegurosAutos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
