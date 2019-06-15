@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SegfyHandsOn.Domain\SegfyHandsOn.Domain.csproj" />
+    <ProjectReference Include="..\SegfyHandsOn.Infra.Data\SegfyHandsOn.Infra.Data.csproj" />
     <ProjectReference Include="..\SegfyHandsOn.Service\SegfyHandsOn.Service.csproj" />
   </ItemGroup>
 

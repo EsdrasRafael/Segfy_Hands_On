@@ -29,14 +29,14 @@ namespace SegfyHandsOn.ApplicationWeb
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            /* ... */
+        //public void ConfigureServices(IServiceCollection services)
+        //{
+        //    /* ... */
 
-            services.AddDbContext<MySqlContext>(o => o.UseMySql("DefaultConnection"));
-            services.AddMvc();
-            /* ... */
-        }
+        //    services.AddDbContext<MySqlContext>(o => o.UseMySql("DefaultConnection"));
+        //    services.AddMvc();
+        //    /* ... */
+        //}
 
         //public void ConfigureServices(IServiceCollection services)
         //{
@@ -48,7 +48,15 @@ namespace SegfyHandsOn.ApplicationWeb
         //        options.MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.None;
         //    });
         //}
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            /* ... */
+
+            services.AddDbContext<MySqlContext>(o => o.UseSqlServer("SqlConnection"));
+            services.AddMvc();
+            /* ... */
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
