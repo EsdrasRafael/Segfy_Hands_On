@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{0E8BC885-5F70-4048-AE44-7C1AA267405C}"
 EndProject
@@ -15,15 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{15CD693F-7C3F-4BE3-B33B-C7DE29D2570F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Application", "SegfyHandsOn.Application\SegfyHandsOn.Application.csproj", "{C1089148-AB62-48DA-BFD8-1C857B24E864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegfyHandsOn.Domain", "SegfyHandsOn.Domain\SegfyHandsOn.Domain.csproj", "{C843638F-DF4F-47B9-B5B0-95A3F0FC3385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Domain", "SegfyHandsOn.Domain\SegfyHandsOn.Domain.csproj", "{C843638F-DF4F-47B9-B5B0-95A3F0FC3385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegfyHandsOn.Service", "SegfyHandsOn.Service\SegfyHandsOn.Service.csproj", "{E5FC44D6-678A-4462-8719-393346C27DD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Service", "SegfyHandsOn.Service\SegfyHandsOn.Service.csproj", "{E5FC44D6-678A-4462-8719-393346C27DD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegfyHandsOn.Infra.Data", "SegfyHandsOn.Infra.Data\SegfyHandsOn.Infra.Data.csproj", "{3E9AF27B-B9B6-4205-936A-13AF87F34CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Infra.Data", "SegfyHandsOn.Infra.Data\SegfyHandsOn.Infra.Data.csproj", "{3E9AF27B-B9B6-4205-936A-13AF87F34CAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegfyHandsOn.Infra.CrossCutting", "SegfyHandsOn.Infra.CrossCutting\SegfyHandsOn.Infra.CrossCutting.csproj", "{0B14EAF5-E815-4532-91B1-C29A63BD5FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Infra.CrossCutting", "SegfyHandsOn.Infra.CrossCutting\SegfyHandsOn.Infra.CrossCutting.csproj", "{0B14EAF5-E815-4532-91B1-C29A63BD5FDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.ApplicationWeb", "SegfyHandsOn.ApplicationWeb\SegfyHandsOn.ApplicationWeb.csproj", "{036DF981-B15B-499E-812C-A3B2ABF854E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C843638F-DF4F-47B9-B5B0-95A3F0FC3385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C843638F-DF4F-47B9-B5B0-95A3F0FC3385}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C843638F-DF4F-47B9-B5B0-95A3F0FC3385}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{0B14EAF5-E815-4532-91B1-C29A63BD5FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B14EAF5-E815-4532-91B1-C29A63BD5FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B14EAF5-E815-4532-91B1-C29A63BD5FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036DF981-B15B-499E-812C-A3B2ABF854E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036DF981-B15B-499E-812C-A3B2ABF854E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036DF981-B15B-499E-812C-A3B2ABF854E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036DF981-B15B-499E-812C-A3B2ABF854E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,11 +58,11 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FE443327-07BC-4B4C-A81E-36650CA94F0A} = {7B44751B-F131-4150-AFAB-C4F065E316A2}
 		{15CD693F-7C3F-4BE3-B33B-C7DE29D2570F} = {7B44751B-F131-4150-AFAB-C4F065E316A2}
-		{C1089148-AB62-48DA-BFD8-1C857B24E864} = {0E8BC885-5F70-4048-AE44-7C1AA267405C}
 		{C843638F-DF4F-47B9-B5B0-95A3F0FC3385} = {05A1B0F8-164D-40C8-B878-9C8D445EAE70}
 		{E5FC44D6-678A-4462-8719-393346C27DD3} = {53C4E19F-2A1C-465D-A9BF-62FADBE87C10}
 		{3E9AF27B-B9B6-4205-936A-13AF87F34CAC} = {FE443327-07BC-4B4C-A81E-36650CA94F0A}
 		{0B14EAF5-E815-4532-91B1-C29A63BD5FDA} = {15CD693F-7C3F-4BE3-B33B-C7DE29D2570F}
+		{036DF981-B15B-499E-812C-A3B2ABF854E2} = {0E8BC885-5F70-4048-AE44-7C1AA267405C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B83713DE-E417-4FAB-8C6E-6A90017376DA}
