@@ -15,13 +15,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{15CD693F-7C3F-4BE3-B33B-C7DE29D2570F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegfyHandsOn.Application", "SegfyHandsOn.Application\SegfyHandsOn.Application.csproj", "{C1089148-AB62-48DA-BFD8-1C857B24E864}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1089148-AB62-48DA-BFD8-1C857B24E864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE443327-07BC-4B4C-A81E-36650CA94F0A} = {7B44751B-F131-4150-AFAB-C4F065E316A2}
 		{15CD693F-7C3F-4BE3-B33B-C7DE29D2570F} = {7B44751B-F131-4150-AFAB-C4F065E316A2}
+		{C1089148-AB62-48DA-BFD8-1C857B24E864} = {0E8BC885-5F70-4048-AE44-7C1AA267405C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B83713DE-E417-4FAB-8C6E-6A90017376DA}
