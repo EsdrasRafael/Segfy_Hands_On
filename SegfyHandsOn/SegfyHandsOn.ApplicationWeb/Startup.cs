@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SegfyHandsOn.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql;
 
 namespace SegfyHandsOn.ApplicationWeb
 {
@@ -25,9 +28,23 @@ namespace SegfyHandsOn.ApplicationWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            /* ... */
+
+            services.AddDbContext<MySqlContext>(o => o.UseMySql("DefaultConnection"));
+
+            /* ... */
         }
 
+        //public void ConfigureServices(IServiceCollection services)
+        //{
+        //    services.AddDbContext<MySqlContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+
+        //    services.Configure<CookiePolicyOptions>(options => 
+        //    {
+        //        options.CheckConsentNeeded = context => true;
+        //        options.MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.None;
+        //    });
+        //}
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {

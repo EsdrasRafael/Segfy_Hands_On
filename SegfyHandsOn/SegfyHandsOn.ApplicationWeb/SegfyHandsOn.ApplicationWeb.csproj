@@ -8,6 +8,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SegfyHandsOn.Domain\SegfyHandsOn.Domain.csproj" />
+    <ProjectReference Include="..\SegfyHandsOn.Service\SegfyHandsOn.Service.csproj" />
   </ItemGroup>
 
 </Project>
