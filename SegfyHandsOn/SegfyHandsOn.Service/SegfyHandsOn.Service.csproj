@@ -5,15 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="8.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SegfyHandsOn.Domain\SegfyHandsOn.Domain.csproj" />
+    <ProjectReference Include="..\SegfyHandsOn.Infra.Data\SegfyHandsOn.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
