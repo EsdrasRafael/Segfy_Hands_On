@@ -1,6 +1,6 @@
 export class SeguroautoDetail 
 {
-    PMId:number;
+    Id:number;
     NumeroApolice:number;
     CPF:string;
     PlacaVeiculo:string;

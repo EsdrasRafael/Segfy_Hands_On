@@ -19,10 +19,10 @@ export class SeguroautoDetailListComponent implements OnInit {
   {
     this.service.formData = Object.assign({}, pd);
   }
-  onDelete(PMId)
+  onDelete(Id)
   {
     if(confirm('Tem certeza que deseja deletar este registro ?')){
-    this.service.deleteSeguroAuto(PMId)
+    this.service.deleteSeguroAuto(Id)
     .subscribe(r=>{
       debugger;
       this.service.refreshList();

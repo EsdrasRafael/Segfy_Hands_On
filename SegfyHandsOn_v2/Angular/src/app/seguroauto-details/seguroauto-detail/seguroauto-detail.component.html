@@ -1,5 +1,5 @@
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-  <input class="form-group" name="PMId" [value]="service.formData.PMId" >
+  <input class="form-group" type="hidden" name="Id" [value]="service.formData.Id" >
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -41,7 +41,7 @@
               </div>
             </div>
               <input name="ValorPremio" #ValorPremio="ngModel" [(ngModel)]="service.formData.ValorPremio" class="form-control" 
-                placeholder="Valor do Prêmio" required>
+                placeholder="Valor do Prêmio" required maxlength="10" minlength="2">
           </div>
         </div>
       <div class="form-group">

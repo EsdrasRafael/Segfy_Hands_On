@@ -27,25 +27,11 @@ namespace WebAPI.Controllers
             return await _context.SegurosAuto.ToListAsync();
         }
 
-        // GET: api/SeguroAuto/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SeguroAuto>> GetSeguroAuto(int id)
-        {
-            var seguroAuto = await _context.SegurosAuto.FindAsync(id);
-
-            if (seguroAuto == null)
-            {
-                return NotFound();
-            }
-
-            return seguroAuto;
-        }
-
         // PUT: api/SeguroAuto/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSeguroAuto(int id, SeguroAuto seguroAuto)
         {
-            if (id != seguroAuto.PMId)
+            if (id != seguroAuto.Id)
             {
                 return BadRequest();
             }
@@ -71,14 +57,28 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
-        // POST:  
+        // GET: api/SeguroAuto/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SeguroAuto>> GetSeguroAuto(int id)
+        {
+            var seguroAuto = await _context.SegurosAuto.FindAsync(id);
+
+            if (seguroAuto == null)
+            {
+                return NotFound();
+            }
+
+            return seguroAuto;
+        }
+
+        // POST:  api/SeguroAuto
         [HttpPost]
         public async Task<ActionResult<SeguroAuto>> PostSeguroAuto(SeguroAuto seguroAuto)
         {
             _context.SegurosAuto.Add(seguroAuto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSeguroAuto", new { id = seguroAuto.PMId }, seguroAuto);
+            return CreatedAtAction("GetSeguroAuto", new { id = seguroAuto.Id }, seguroAuto);
         }
 
         // DELETE: api/SeguroAuto/5
@@ -99,7 +99,7 @@ namespace WebAPI.Controllers
 
         private bool SeguroAutoExists(int id)
         {
-            return _context.SegurosAuto.Any(e => e.PMId == id);
+            return _context.SegurosAuto.Any(e => e.Id == id);
         }
     }
 }

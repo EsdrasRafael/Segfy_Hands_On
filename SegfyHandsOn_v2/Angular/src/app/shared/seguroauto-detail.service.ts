@@ -18,7 +18,7 @@ export class SeguroautoDetailService {
   }
   putSeguroAuto()
   {
-    return this.http.put(this.rootUrl+'/SeguroAuto/'+ this.formData.PMId, this.formData);
+    return this.http.put(this.rootUrl+'/SeguroAuto/'+ this.formData.Id, this.formData);
   }
   deleteSeguroAuto(id)
   {

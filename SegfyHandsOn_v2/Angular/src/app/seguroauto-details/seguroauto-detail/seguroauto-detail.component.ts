@@ -21,7 +21,7 @@ export class SeguroautoDetailComponent implements OnInit {
     if(form!=null)
       form.resetForm();
     this.service.formData = {
-      PMId: 1,
+      Id: 0,
       NumeroApolice:null,
       CPF:'',
       PlacaVeiculo:'',
@@ -31,7 +31,7 @@ export class SeguroautoDetailComponent implements OnInit {
   
   onSubmit(form:NgForm)
   {
-    if(this.service.formData.PMId == 0)
+    if(this.service.formData.Id == 0)
       this.insertRecord(form);
     else
       this.updateRecord(form);
