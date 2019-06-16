@@ -49,7 +49,9 @@ namespace WebAPI
             }
 
             app.UseCors(options =>
-            options.WithOrigins("http://localhost:8081").AllowAnyMethod().AllowAnyHeader());
+                options.WithOrigins("http://localhost:50000")
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseMvc();
         }
     }
