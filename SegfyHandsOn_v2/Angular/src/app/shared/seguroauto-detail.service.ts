@@ -8,11 +8,17 @@ import { HttpClient } from "@angular/common/http";
 export class SeguroautoDetailService {
   formData:SeguroautoDetail
   readonly rootUrl = 'http://localhost:5000/api';
+  list : SeguroautoDetail[]; 
 
   constructor(private http:HttpClient) { }
 
   postSeguroAuto(formData:SeguroautoDetail)
   {
     return this.http.post(this.rootUrl+'/SeguroAuto', formData);
+  }
+  refreshList(){
+    this.http.get(this.rootUrl+'/SeguroAuto')
+    .toPromise()
+    .then(res=> this.list = res as SeguroautoDetail[]); 
   }
 }

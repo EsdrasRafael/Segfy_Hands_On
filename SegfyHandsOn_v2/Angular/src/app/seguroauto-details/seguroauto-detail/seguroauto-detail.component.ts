@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SeguroautoDetailService } from 'src/app/shared/seguroauto-detail.service';
 import { NgForm } from '@angular/forms';
+import { Toast, ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-seguroauto-detail',
@@ -9,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SeguroautoDetailComponent implements OnInit {
 
-  constructor(private service:SeguroautoDetailService) { }
+  constructor(private service:SeguroautoDetailService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -20,11 +21,11 @@ export class SeguroautoDetailComponent implements OnInit {
     if(form!=null)
     form.resetForm();
     this.service.formData = {
-      PMId: 0,
-      NumeroApolice:0,
+      PMId: null,
+      NumeroApolice:null,
       CPF:'',
       PlacaVeiculo:'',
-      ValorPremio:0
+      ValorPremio:null
     }
   } onSubmit(form:NgForm)
   {
@@ -32,6 +33,7 @@ export class SeguroautoDetailComponent implements OnInit {
 .subscribe(
   res=> {
     this.resetForm(form); 
+    this.toastr.success('Cadastro efetuado', 'SeguroAuto Detail Register');
   },
   err=>{
     console.log(err);
