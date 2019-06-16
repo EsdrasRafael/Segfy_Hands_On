@@ -1,5 +1,5 @@
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-  <input name="PMId" [value]="service.formData.PMId" >
+  <input class="form-group" name="PMId" [value]="service.formData.PMId" >
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -33,7 +33,6 @@
             placeholder="Placa do Veículo" required maxlength="7" minlength="7">
       </div>
     </div>
-    
       <div class="form-group">
           <div class="input-group">
             <div class="input-group-prepend">

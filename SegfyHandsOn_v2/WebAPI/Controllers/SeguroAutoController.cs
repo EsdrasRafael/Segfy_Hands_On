@@ -45,7 +45,7 @@ namespace WebAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSeguroAuto(int id, SeguroAuto seguroAuto)
         {
-            if (id != seguroAuto.Id)
+            if (id != seguroAuto.PMId)
             {
                 return BadRequest();
             }
@@ -78,7 +78,7 @@ namespace WebAPI.Controllers
             _context.SegurosAuto.Add(seguroAuto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSeguroAuto", new { id = seguroAuto.Id }, seguroAuto);
+            return CreatedAtAction("GetSeguroAuto", new { id = seguroAuto.PMId }, seguroAuto);
         }
 
         // DELETE: api/SeguroAuto/5
@@ -99,7 +99,7 @@ namespace WebAPI.Controllers
 
         private bool SeguroAutoExists(int id)
         {
-            return _context.SegurosAuto.Any(e => e.Id == id);
+            return _context.SegurosAuto.Any(e => e.PMId == id);
         }
     }
 }

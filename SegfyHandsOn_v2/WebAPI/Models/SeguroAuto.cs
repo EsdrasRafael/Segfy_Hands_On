@@ -10,7 +10,7 @@ namespace WebAPI.Models
     public class SeguroAuto
     {
         [Key]
-        public int Id { get; set; }
+        public int PMId { get; set; }
         [Required]
         [Column(TypeName = "nchar(100)")]
         public int NumeroApolice { get; set; }

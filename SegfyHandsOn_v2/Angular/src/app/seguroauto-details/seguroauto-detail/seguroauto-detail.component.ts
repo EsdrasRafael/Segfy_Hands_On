@@ -21,7 +21,7 @@ export class SeguroautoDetailComponent implements OnInit {
     if(form!=null)
       form.resetForm();
     this.service.formData = {
-      PMId: 0,
+      PMId: 1,
       NumeroApolice:null,
       CPF:'',
       PlacaVeiculo:'',
