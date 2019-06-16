@@ -1,12 +1,5 @@
-<div class="jumbtron">
-  <h1 class="display-4 text-center">Segfy Hands On</h1>
-  <hr>
-  <div class="row">
-    <div class="col-md-5">
-      <app-seguroauto-detail></app-seguroauto-detail>
-    </div>
-    <div class="col-md-7">
-      <app-seguroauto-detail-list></app-seguroauto-detail-list>
-    </div>
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <input name="NumeroApolice" #NumeroApolice="ngModel" [(ngModel)]="service.formData.NumeroApolice" class="form-control" placeholder="Número da Apólice">
   </div>
-</div>
+</form>
