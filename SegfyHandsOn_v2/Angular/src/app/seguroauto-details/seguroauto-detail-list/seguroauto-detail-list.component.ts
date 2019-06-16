@@ -15,7 +15,7 @@ export class SeguroautoDetailListComponent implements OnInit {
   ngOnInit() {
     this.service.refreshList();
   }
-  populateForm(pd:SeguroautoDetail)
+  populateForm(pd: SeguroautoDetail)
   {
     this.service.formData = Object.assign({}, pd);
   }
@@ -24,10 +24,12 @@ export class SeguroautoDetailListComponent implements OnInit {
     if(confirm('Tem certeza que deseja deletar este registro ?')){
     this.service.deleteSeguroAuto(PMId)
     .subscribe(r=>{
+      debugger;
       this.service.refreshList();
       this.toastr.warning('Exlusão realizada', 'Seguro Auto deletado')
     },
       err=>{
+        debugger;
         console.log(err);
       })
   }

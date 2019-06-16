@@ -1,11 +1,17 @@
 <table class="table table-hover">
+    <tr>
+        <th>Apólice N°</th>
+        <th>CPF</th>
+        <th>Placa</th>
+        <th>Prêmio</th>
+    </tr>
     <tr *ngFor="let pd of service.list">
         <td (click)="populateForm(pd)">{{pd.NumeroApolice}}</td>
         <td (click)="populateForm(pd)">{{pd.CPF}}</td>
         <td (click)="populateForm(pd)">{{pd.PlacaVeiculo}}</td>
-        <td (click)="populateForm(pd)">{{pd.ValorPremio}}</td> 
+        <td (click)="populateForm(pd)">R$: {{pd.ValorPremio}},00</td> 
         <td>
-            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.PMid)"></i>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.PMId)"></i>
         </td>
     </tr>
 </table> 
