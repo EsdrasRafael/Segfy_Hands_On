@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeguroautoDetailService } from 'src/app/shared/seguroauto-detail.service';
 
 @Component({
   selector: 'app-seguroauto-detail-list',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeguroautoDetailListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SeguroautoDetailService) { }
 
   ngOnInit() {
+    this.service.refreshList();
   }
 
 }

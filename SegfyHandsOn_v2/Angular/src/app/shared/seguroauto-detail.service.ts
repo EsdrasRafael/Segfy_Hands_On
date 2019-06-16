@@ -17,7 +17,7 @@ export class SeguroautoDetailService {
     return this.http.post(this.rootUrl+'/SeguroAuto', formData);
   }
   refreshList(){
-    this.http.get(this.rootUrl+'/SeguroAuto')
+    this.http.get(this.rootUrl +'/SeguroAuto')
     .toPromise()
     .then(res=> this.list = res as SeguroautoDetail[]); 
   }

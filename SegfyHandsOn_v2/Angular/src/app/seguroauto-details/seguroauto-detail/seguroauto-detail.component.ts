@@ -33,7 +33,7 @@ export class SeguroautoDetailComponent implements OnInit {
 .subscribe(
   res=> {
     this.resetForm(form); 
-    this.toastr.success('Cadastro efetuado', 'SeguroAuto Detail Register');
+    this.toastr.success('Cadastro efetuado', 'Seguro Auto Detail Register');
   },
   err=>{
     console.log(err);
