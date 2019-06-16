@@ -36,6 +36,8 @@ namespace WebAPI
                     if (resolver != null)
                         (resolver as DefaultContractResolver).NamingStrategy = null;
                     });
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +48,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:8081").AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }

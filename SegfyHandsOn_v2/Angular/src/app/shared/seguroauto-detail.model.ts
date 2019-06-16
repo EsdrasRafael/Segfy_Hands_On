@@ -4,5 +4,5 @@ export class SeguroautoDetail
     NumeroApolice:number;
     CPF:string;
     PlacaVeiculo:string;
-    ValorPremio:Float64Array;
+    ValorPremio:number;
 }

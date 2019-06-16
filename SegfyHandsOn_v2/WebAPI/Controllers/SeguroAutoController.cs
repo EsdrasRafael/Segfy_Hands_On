@@ -71,7 +71,7 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/SeguroAuto
+        // POST:  
         [HttpPost]
         public async Task<ActionResult<SeguroAuto>> PostSeguroAuto(SeguroAuto seguroAuto)
         {
