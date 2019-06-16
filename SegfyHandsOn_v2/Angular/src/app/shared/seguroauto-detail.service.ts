@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class SeguroautoDetailService {
-  formData:SeguroautoDetail
+  formData:SeguroautoDetail;
   readonly rootUrl = 'http://localhost:5000/api';
   list : SeguroautoDetail[]; 
 

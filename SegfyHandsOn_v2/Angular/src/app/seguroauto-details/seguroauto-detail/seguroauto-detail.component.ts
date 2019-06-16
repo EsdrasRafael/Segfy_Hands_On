@@ -22,14 +22,14 @@ export class SeguroautoDetailComponent implements OnInit {
       form.resetForm();
     this.service.formData = {
       Id: 0,
-      NumeroApolice:null,
+      NumeroApolice: null,
       CPF:'',
       PlacaVeiculo:'',
-      ValorPremio:null
+      ValorPremio: null
     }
   } 
   
-  onSubmit(form:NgForm)
+  onSubmit(form: NgForm)
   {
     if(this.service.formData.Id == 0)
       this.insertRecord(form);
