@@ -15,7 +15,7 @@ namespace WebAPI.Models
         [Column(TypeName = "nchar(100)")]
         public int NumeroApolice { get; set; }
         [Required]
-        [Column(TypeName = "nchar(11)")]
+        [Column(TypeName = "nchar(14)")]
         public string CPF { get; set; }
         [Required]
         [Column(TypeName = "nchar(7)")]
