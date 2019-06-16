@@ -22,7 +22,7 @@ export class SeguroautoDetailComponent implements OnInit {
       form.resetForm();
     this.service.formData = {
       Id: 0,
-      NumeroApolice: null,
+      NumeroApolice:'',
       CPF:'',
       PlacaVeiculo:'',
       ValorPremio: null

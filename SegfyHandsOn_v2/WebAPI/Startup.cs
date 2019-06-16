@@ -25,24 +25,9 @@ namespace WebAPI
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
-            services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddJsonOptions(options =>
-                {
-                    var resolver = options.SerializerSettings.ContractResolver;
-                    if (resolver != null)
-                        (resolver as DefaultContractResolver).NamingStrategy = null;
-                    });
-            services.AddCors();
-
-        }
-
         //public void ConfigureServices(IServiceCollection services)
         //{
-        //    services.AddDbContext<Context>(options => options.UseMySql(Configuration.GetConnectionString("MySqlConnection")));
+        //    services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
         //    services.AddMvc()
         //        .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
         //        .AddJsonOptions(options =>
@@ -50,10 +35,25 @@ namespace WebAPI
         //            var resolver = options.SerializerSettings.ContractResolver;
         //            if (resolver != null)
         //                (resolver as DefaultContractResolver).NamingStrategy = null;
-        //        });
+        //            });
         //    services.AddCors();
 
         //}
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddDbContext<Context>(options => options.UseMySql(Configuration.GetConnectionString("MySqlConnection")));
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(options =>
+                {
+                    var resolver = options.SerializerSettings.ContractResolver;
+                    if (resolver != null)
+                        (resolver as DefaultContractResolver).NamingStrategy = null;
+                });
+            services.AddCors();
+
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

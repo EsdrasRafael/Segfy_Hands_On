@@ -12,8 +12,8 @@ namespace WebAPI.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        [Column(TypeName = "nchar(100)")]
-        public int NumeroApolice { get; set; }
+        [Column(TypeName = "nchar(11)")]
+        public string NumeroApolice { get; set; }
         [Required]
         [Column(TypeName = "nchar(14)")]
         public string CPF { get; set; }
