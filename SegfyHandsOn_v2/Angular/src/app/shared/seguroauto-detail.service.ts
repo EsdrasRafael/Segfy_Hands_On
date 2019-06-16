@@ -12,9 +12,17 @@ export class SeguroautoDetailService {
 
   constructor(private http:HttpClient) { }
 
-  postSeguroAuto(formData:SeguroautoDetail)
+  postSeguroAuto()
   {
-    return this.http.post(this.rootUrl+'/SeguroAuto', formData);
+    return this.http.post(this.rootUrl+'/SeguroAuto', this.formData);
+  }
+  putSeguroAuto()
+  {
+    return this.http.put(this.rootUrl+'/SeguroAuto/'+ this.formData.PMId, this.formData);
+  }
+  deleteSeguroAuto(id)
+  {
+    return this.http.delete(this.rootUrl+'/SeguroAuto/'+ id);
   }
   refreshList(){
     this.http.get(this.rootUrl +'/SeguroAuto')

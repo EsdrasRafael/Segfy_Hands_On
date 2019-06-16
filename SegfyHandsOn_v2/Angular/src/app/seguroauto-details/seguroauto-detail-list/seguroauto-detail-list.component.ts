@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SeguroautoDetailService } from 'src/app/shared/seguroauto-detail.service';
 import { SeguroautoDetail } from 'src/app/shared/seguroauto-detail.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-seguroauto-detail-list',
@@ -9,7 +10,7 @@ import { SeguroautoDetail } from 'src/app/shared/seguroauto-detail.model';
 })
 export class SeguroautoDetailListComponent implements OnInit {
 
-  constructor(private service:SeguroautoDetailService) { }
+  constructor(private service:SeguroautoDetailService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.service.refreshList();
@@ -18,4 +19,17 @@ export class SeguroautoDetailListComponent implements OnInit {
   {
     this.service.formData = Object.assign({}, pd);
   }
+  onDelete(PMId)
+  {
+    if(confirm('Tem certeza que deseja deletar este registro ?')){
+    this.service.deleteSeguroAuto(PMId)
+    .subscribe(r=>{
+      this.service.refreshList();
+      this.toastr.warning('Exlusão realizada', 'Seguro Auto deletado')
+    },
+      err=>{
+        console.log(err);
+      })
+  }
+}
 }

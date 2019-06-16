@@ -21,23 +21,52 @@ export class SeguroautoDetailComponent implements OnInit {
     if(form!=null)
     form.resetForm();
     this.service.formData = {
-      PMId: null,
+      PMId: 0,
       NumeroApolice:null,
       CPF:'',
       PlacaVeiculo:'',
       ValorPremio:null
     }
-  } onSubmit(form:NgForm)
+  } 
+  
+  onSubmit(form:NgForm)
   {
-    this.service.postSeguroAuto(form.value)
-.subscribe(
-  res=> {
-    this.resetForm(form); 
-    this.toastr.success('Cadastro efetuado', 'Seguro Auto Detail Register');
-  },
-  err=>{
-    console.log(err);
+    if(this.service.formData.PMId==0)
+      this.insertRecord(form);
+    else
+    {
+      this.updateRecord(form);
+    }
   }
- )  }
+  insertRecord(form:NgForm)
+  {
+    this.service.postSeguroAuto()
+      .subscribe(
+        res=> {
+          this.resetForm(form); 
+          this.toastr.success('Cadastro efetuado', 'Seguro Auto Detail Register');
+          this.service.refreshList();
+        },
+        err=>{
+          console.log(err);
+        }
+      )
+  }
+  
+  updateRecord(form:NgForm)
+  {
+    this.service.putSeguroAuto()
+      .subscribe(
+        res=> {
+          this.resetForm(form); 
+          this.toastr.info('Alteração efetuada', 'Seguro Auto Detail Register');
+          this.service.refreshList();
+        },
+        err=>{
+          console.log(err);
+        }
+      )
+  }
 
+  
 }
