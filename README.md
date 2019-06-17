@@ -36,6 +36,9 @@ O repositório possui duas Solutions, SegfyHandsOn e SegfyHandsOn_v2. A primeira
 - Asp.Net Core 2.2
 - NodeJs: 10.16.0
 
+## Prints:
+
+  Prints do projeto disponivel na Prints.
 
 
 
