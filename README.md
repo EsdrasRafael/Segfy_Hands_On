@@ -38,7 +38,7 @@ O repositório possui duas Solutions, SegfyHandsOn e SegfyHandsOn_v2. A primeira
 
 ## Prints:
 
-  Prints do projeto disponivel na Prints.
+  Prints do projeto disponivel na pasta Prints.
 
 
 
