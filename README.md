@@ -18,7 +18,9 @@ O repositório possui duas Solutions, SegfyHandsOn e SegfyHandsOn_v2. A primeira
 
 - Faça a instalação do NodeJs.
 - Através de seu prompt de comando instale o Angular/cli utilizando o comando: npm install -g @angular/cli.
+- Extraia o arquivo node_modules.zip presente na pasta Angular.
 - No arquivo seguroauto-detail.service-ts configure a url na qual sua api está rodando. Ex: http://localhost:59035/api.
+- Rode a aplicação utilizando no temrinal de comando o comando: ng serve
 
 ## Arquitetura: 
 
